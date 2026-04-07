@@ -1,25 +1,5 @@
 import React from 'react';
-
-function Field({ label, children }) {
-  return (
-    <label className="field">
-      <div className="field__label">{label}</div>
-      {children}
-    </label>
-  );
-}
-
-function TextInput(props) {
-  return <input {...props} className={`text-input ${props.className || ''}`.trim()} />;
-}
-
-function TextArea(props) {
-  return <textarea {...props} className={`text-area ${props.className || ''}`.trim()} />;
-}
-
-function Select(props) {
-  return <select {...props} className={`select ${props.className || ''}`.trim()} />;
-}
+import { Field, TextInput, TextArea, Select } from '../ui/fields.jsx';
 
 export default function Sidebar({
   fileInputRef,
