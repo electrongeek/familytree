@@ -61,6 +61,7 @@ body {
   text-align: center;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
