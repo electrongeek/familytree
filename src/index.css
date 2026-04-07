@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -50,19 +54,28 @@
   }
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+/* ADDED: ensure ReactFlow can get a real height through the DOM chain */
+html,
+body {
   height: 100%;
-  width: 100%;
+}
+
+body {
+  margin: 0;
 }
 
 #root {
-  height: 100%;
   width: 100%;
+  max-width: none;
+  margin: 0;
+  /* (optional) remove the border if you don't want a vertical rule */
+  /* border-inline: none; */
+
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  height: 100%;
 }
 
 h1,
